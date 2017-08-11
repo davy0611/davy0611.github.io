@@ -92,7 +92,7 @@ cd $AppCmdDirectory
 
 Mount your SQL Server ISO and double-click on the Setup File. You'll want to install the Database Engine, The Reporting Services, and the Management Tools. The rest are just confirmig the defaults. One thing worth mentioning is make sure you add an administrative group when selecting your choice of authentication (i.e. Windows Authentication versus SQL authentication). Make sure you also include the machine object that corresponds to your primary site server (i.e. CM01).
 
-![Installing SQL Server 2014](http://i.imgur.com/jBbf2Y4.gif)
+![Installing SQL Server - Large](http://i.imgur.com/UhVI1zV.gif)
 
 ___
 
