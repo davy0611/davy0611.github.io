@@ -94,8 +94,9 @@ Mount your SQL Server ISO and double-click on the Setup File. You'll want to ins
 
 ![Installing SQL Server 2014](http://i.imgur.com/jBbf2Y4.gif)
 
+___
 
-### Configuring SQL Server 2014 and Reporting Services
+### Configuring SQL Server 2014
 
 Launch SQL Server 2014 Configuration Manager and the goal here is to enable IPv4 under SQL Server Network Configuration.
 
@@ -112,7 +113,24 @@ simply follow the animation below it for your workaround
 ![SQL Server Management Console Bug Workaround - Large](http://i.imgur.com/npKLnIU.gif)
 
 
-**OR** launch the command console in administrator mode and type the equivalent command:
+**OR** launch the command console in administrator mode and type the equivalent command (assuming IP4 is the one containing your production network's IP address):
 
 ```reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.SCCM\MSSQLServer\SuperSocketNetLib\Tcp\IP4" /v Enabled /t REG_DWORD /d 0x00000001 /f```
+
+We also want to set a static TCP Port and avoid using dynamic ports, so it's the same management console and same locations. The goal is to clear any entries for TCP Dynamic Ports and any entries for TCP Port. Then you'll want to scroll all the way to the bottom of the bottom of the TCP/IP properties window and adding 1433 to the TCP Port entry for all addresses.
+
+![Configuring SQL TCP Port](http://i.imgur.com/lmG1dcR.gif)
+
+___
+
+### Configuring SQL Server Reporting Services
+
+If you've configured SQL Server's TCP/IP settings by:
+
+* Enabling the IP section that contains the active IP Address used by the server (i.e. 192.168.2.101)
+* Defining a Static TCP Port of 1433
+
+Then you're ready to configure Reporting Services. Consult the animation for details.
+
+![Configuring Reporting Services](http://i.imgur.com/a8gIV6i.gif)
 
