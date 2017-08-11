@@ -134,3 +134,17 @@ Then you're ready to configure Reporting Services. Consult the animation for det
 
 ![Configuring Reporting Services](http://i.imgur.com/a8gIV6i.gif)
 
+
+### Configuring the Windows 10 ADK
+
+You really don't need everything within the ADK on your primary site server. I find that the Windows PE environment, Deployment Tools, and the User State Migration Toolkit are about all you really want installed.
+
+![Installing Windows 10 ADK](http://i.imgur.com/6HP5n95.gif)
+
+### Next Steps
+
+* Extend AD Schema
+* Change SQL Server Service Account to Domain User Account
+* Verify SCCM Computer Object has Full Permissions to SMS Management OU in AD
+* Verify Static TCP Port for SQL Server TCP/IP Properties
+* Install WSUS
