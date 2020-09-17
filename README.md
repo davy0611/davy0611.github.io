@@ -1,1 +1,1 @@
-#### System Center Configuration Manager + PowerShell = Success
+#### The POWERshell
